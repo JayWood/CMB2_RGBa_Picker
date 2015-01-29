@@ -45,8 +45,7 @@ class JW_Fancy_Color {
 		) ),
 	}
 
-	public function setup_admin_scripts(){
-		wp_enqueue_style( 'wp-color-picker' );
+	public function setup_admin_scripts() {
 		wp_enqueue_script( 'jw-cmb2-rgba-picker-js', plugins_url( 'js/jw-cmb2-rgba-picker.js', __FILE__ ), array( 'wp-color-picker' ), self::VERSION, true );
 	}
 }

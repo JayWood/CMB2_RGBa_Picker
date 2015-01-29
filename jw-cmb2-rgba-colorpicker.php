@@ -32,18 +32,17 @@
 class JW_Fancy_Color {
 	const VERSION = '0.1.0';
 
-	public function hooks(){
-		add_action( 'cmb2_render_rgba_colorpicker', array( $this, 'render_color_picker' ), 10, 2 );
+	public function hooks() {
+		add_action( 'cmb2_render_rgba_colorpicker', array( $this, 'render_color_picker' ), 10, 5 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'setup_admin_scripts' ) );
 	}
 
-	public function render_color_picker( $field_args, $value ){
-		$default = isset( $field_args->args['default'] ) ? 'data-default-color="'. $field_args->args['default'] .'"' : '';
-		// print_r( $field_args );
-		echo '<input type="text" value="'. $value .'" class="color-picker" '. $default .' data-alpha="true" id="'.$field_args->args['id'].'" name="'.$field_args->args['id'].'"/>';
-		if ( $field_args->args['desc'] ){
-			echo '<p class="cmb2-metabox-description">' . $field_args->args['desc'] . '</p>';
-		}
+	public function render_color_picker( $field, $field_escaped_value, $field_object_id, $field_object_type, $field_type_object ) {
+		echo $field_type_object->input( array(
+			'class'              => 'color-picker',
+			'data-default-color' => $field->args( 'default' ),
+			'data-alpha'         => 'true',
+		) ),
 	}
 
 	public function setup_admin_scripts(){

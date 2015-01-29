@@ -42,7 +42,7 @@ class JW_Fancy_Color {
 			'class'              => 'color-picker',
 			'data-default-color' => $field->args( 'default' ),
 			'data-alpha'         => 'true',
-		) ),
+		) );
 	}
 
 	public function setup_admin_scripts() {

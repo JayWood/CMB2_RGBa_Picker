@@ -3,7 +3,7 @@
  * Plugin Name: CMB2 RGBa Colorpicker
  * Plugin URI:  http://plugish.com
  * Description: Adds a RGBa Colorpicker to the CMB2 field types, original JS from 23r9i0 on github.
- * Version:     0.1.0
+ * Version:     0.2.0
  * Author:      Jay Wood
  * Author URI:  http://plugish.com
  * Donate link: http://plugish.com
@@ -30,7 +30,7 @@
  */
 
 class JW_Fancy_Color {
-	const VERSION = '0.1.0';
+	const VERSION = '0.2.0';
 
 	public function hooks() {
 		add_action( 'cmb2_render_rgba_colorpicker', array( $this, 'render_color_picker' ), 10, 5 );

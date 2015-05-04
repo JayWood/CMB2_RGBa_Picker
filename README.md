@@ -14,3 +14,11 @@ array(
     'default'  => '#ffffff',
 ),
 ```
+
+## Changelog
+
+### 0.2.0
+* Fixes [#2](https://github.com/JayWood/CMB2_RGBa_Picker/issues/2) - Repeatable groups fix thanks to [leolweb](https://github.com/leolweb)
+
+### 0.1.0
+* Initial Commit

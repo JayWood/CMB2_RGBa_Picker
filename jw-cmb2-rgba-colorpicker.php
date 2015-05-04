@@ -39,7 +39,7 @@ class JW_Fancy_Color {
 
 	public function render_color_picker( $field, $field_escaped_value, $field_object_id, $field_object_type, $field_type_object ) {
 		echo $field_type_object->input( array(
-			'class'              => 'color-picker',
+			'class'              => 'cmb2-colorpicker color-picker',
 			'data-default-color' => $field->args( 'default' ),
 			'data-alpha'         => 'true',
 		) );
